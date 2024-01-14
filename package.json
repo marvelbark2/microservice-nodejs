@@ -1,0 +1,20 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "@trpc/client": "^11.0.0-next-beta.193",
+    "@trpc/server": "^11.0.0-next-beta.193",
+    "express": "^4.18.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "lerna": "^8.0.2"
+  },
+  "scripts": {
+    "serve": "lerna run tsc && lerna run start"
+  }
+}

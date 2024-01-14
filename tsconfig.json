@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es6",
+    "sourceMap": true,
+    "lib": ["es6"],
+    "baseUrl": "./packages",
+    "paths": {
+      "@/inventory": ["./inventory/lib/server.d.ts"],
+      "@/cart": ["./cart/lib/server.d.ts"]
+    }
+  },
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.js"]
+}
