@@ -12,7 +12,7 @@ WORKDIR /app/packages/apigw
 # The --slim flag will cause the package json to only include the dependencies, so not all changes to the package json cause docker to reinstall all packages.
 COPY  packages/apigw/package-slim.json package.json
 WORKDIR /app/
-RUN npx lerna bootstrap --scope=apigw --includeDependencies
+RUN npm install -w apigw
 WORKDIR /app/packages/apigw
 # The normal package.json should be copied after the install into the container
 COPY  packages/apigw/package.json ./
@@ -24,7 +24,7 @@ WORKDIR /app/packages/cart
 # The --slim flag will cause the package json to only include the dependencies, so not all changes to the package json cause docker to reinstall all packages.
 COPY  packages/cart/package-slim.json package.json
 WORKDIR /app/
-RUN npx lerna bootstrap --scope=cart --includeDependencies
+RUN npm install -w cart
 WORKDIR /app/packages/cart
 # The normal package.json should be copied after the install into the container
 COPY  packages/cart/package.json ./
@@ -36,7 +36,7 @@ WORKDIR /app/packages/inventory
 # The --slim flag will cause the package json to only include the dependencies, so not all changes to the package json cause docker to reinstall all packages.
 COPY  packages/inventory/package-slim.json package.json
 WORKDIR /app/
-RUN npx lerna bootstrap --scope=inventory --includeDependencies
+RUN npm install -w inventory
 WORKDIR /app/packages/inventory
 # The normal package.json should be copied after the install into the container
 COPY  packages/inventory/package.json ./
@@ -48,7 +48,7 @@ WORKDIR /app/packages/customer
 # The --slim flag will cause the package json to only include the dependencies, so not all changes to the package json cause docker to reinstall all packages.
 COPY  packages/customer/package-slim.json package.json
 WORKDIR /app/
-RUN npx lerna bootstrap --scope=customer --includeDependencies
+RUN npm install -w customer
 WORKDIR /app/packages/customer
 # The normal package.json should be copied after the install into the container
 COPY  packages/customer/package.json ./
