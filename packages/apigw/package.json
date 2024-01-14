@@ -14,9 +14,8 @@
     "lib"
   ],
   "scripts": {
-    "start": "ryo dev",
-    "test": "node ./__tests__/apigw.test.js"
-  },
+    "start": "ryo dev"
+    },
   "dependencies": {
     "@trpc/client": "^11.0.0-next-beta.193",
     "@trpc/server": "^11.0.0-next-beta.193",
