@@ -1,0 +1,7 @@
+{
+    "name": "cart",
+    "version": "0.0.0",
+    "dependencies": {
+        "redis": "^4.6.12"
+    }
+}
