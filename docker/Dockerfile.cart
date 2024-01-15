@@ -3,8 +3,7 @@ FROM node:lts-alpine
 WORKDIR /usr/src/app
 
 # Copy root package.json and lockfile
-COPY package.json ./
-COPY package-lock.json ./
+COPY *.json ./
 
 # Copy the docs package.json
 COPY packages/cart/package.json ./packages/cart/package.json
