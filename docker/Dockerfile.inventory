@@ -12,7 +12,6 @@ COPY prisma ./prisma/
 
 RUN npm install
 RUN npm install -w @prospeak/inventory
-RUN npx lerna run tsc
 
 # Copy app source
 COPY packages/inventory ./packages/inventory
