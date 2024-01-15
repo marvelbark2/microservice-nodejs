@@ -95,3 +95,4 @@ networks:
 volumes:
   postgres:
   pgadmin:
+  redis:
