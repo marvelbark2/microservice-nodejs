@@ -12,9 +12,11 @@ COPY packages/cart/package.json ./packages/cart/package.json
 COPY prisma ./prisma/
 
 RUN npm install
+RUN npm install -w @prospeak/cart
+RUN npx lerna run tsc
 
 # Copy app source
-COPY . .
+COPY packages/cart ./packages/cart
 
 EXPOSE 3000
 

@@ -12,9 +12,11 @@ COPY packages/customer/package.json ./packages/customer/package.json
 COPY prisma ./prisma/
 
 RUN npm install
+RUN npm install -w @prospeak/customer
+RUN npx lerna run tsc
 
 # Copy app source
-COPY . .
+COPY packages/customer ./packages/customer
 
 EXPOSE 3000
 

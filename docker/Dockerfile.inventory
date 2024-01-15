@@ -12,9 +12,11 @@ COPY packages/inventory/package.json ./packages/inventory/package.json
 COPY prisma ./prisma/
 
 RUN npm install
+RUN npm install -w @prospeak/inventory
+RUN npx lerna run tsc
 
 # Copy app source
-COPY . .
+COPY packages/inventory ./packages/inventory
 
 EXPOSE 3000
 
