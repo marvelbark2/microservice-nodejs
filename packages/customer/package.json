@@ -24,5 +24,5 @@
   "dependencies": {
     "@prisma/client": "^5.8.0"
   },
-  "gitHead": "e02e3552b6c9984d9f6fad4a4b8d9eb6d33b9fff"
+  "gitHead": "27aaca07b624d9eb6732faeef03c63b67f3d1a67"
 }
