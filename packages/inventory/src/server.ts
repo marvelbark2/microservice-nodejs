@@ -66,16 +66,16 @@ const appRouter = t.router({
 
 export type AppRouter = typeof appRouter;
 
-const app = express();
+export function run(PORT: number) {
+    const app = express();
 
-const PORT = process.env.PORT || 4003;
-
-app.use(
-    '/trpc',
-    trpcExpress.createExpressMiddleware({
-        router: appRouter
-    }),
-);
-app.listen(PORT, () => {
-    console.log(`🚀 Product service ready at: http://localhost:${PORT}`);
-});
+    app.use(
+        '/trpc',
+        trpcExpress.createExpressMiddleware({
+            router: appRouter
+        }),
+    );
+    app.listen(PORT, () => {
+        console.log(`🚀 Product service ready at: http://localhost:${PORT}`);
+    });
+}
