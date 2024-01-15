@@ -4,17 +4,8 @@ WORKDIR /usr/src/app
 
 RUN apk add libc6-compat
 
-# Copy root package.json and lockfile
-COPY *.json ./
-
-# Copy the docs package.json
-COPY packages/apigw/package.json ./packages/apigw/package.json
-COPY packages/apigw ./packages/apigw
-
-RUN npm install
-RUN npm install -w @prospeak/apigw
-
-# Copy app source
+COPY . .
+RUN npm install --workspaces
 
 EXPOSE 3000
 
