@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/node": "^20.11.2",
     "lerna": "^8.0.2"
   },
   "scripts": {
