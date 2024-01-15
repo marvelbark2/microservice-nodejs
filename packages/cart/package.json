@@ -14,7 +14,6 @@
     "lib"
   ],
   "scripts": {
-    "postinstall": "npm run tsc",
     "start": "node ./lib/server.js",
     "tsc": "tsc",
     "test": "node ./__tests__/cart.test.js"
