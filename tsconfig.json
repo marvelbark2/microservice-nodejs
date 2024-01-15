@@ -16,5 +16,6 @@
       "@/cart": ["./cart/lib/server.d.ts"]
     }
   },
-  "exclude": ["node_modules", "**/*.spec.ts", "**/*.js"]
+  "exclude": ["node_modules", "**/*.spec.ts", "**/*.js"],
+  "include": ["packages/**/*.ts"]
 }
