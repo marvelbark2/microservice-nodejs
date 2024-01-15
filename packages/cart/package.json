@@ -1,5 +1,5 @@
 {
-  "name": "cart",
+  "name": "@prospeak/cart",
   "version": "0.1.0",
   "description": "Now I’m the model of a modern major general / The venerated Virginian veteran whose men are all / Lining up, to put me up on a pedestal / Writin’ letters to relatives / Embellishin’ my elegance and eloquence / But the elephant is in the room / The truth is in ya face when ya hear the British cannons go / BOOM",
   "keywords": [],
@@ -20,5 +20,6 @@
   },
   "dependencies": {
     "redis": "^4.6.12"
-  }
+  },
+  "gitHead": "e02e3552b6c9984d9f6fad4a4b8d9eb6d33b9fff"
 }
