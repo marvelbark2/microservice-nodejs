@@ -1,1 +1,3 @@
-export { run } from './server'
+import { run } from './server'
+
+run(+(process.env.PORT || 3000))
