@@ -5,6 +5,7 @@ WORKDIR /usr/src/app
 RUN apk add libc6-compat
 
 COPY . .
+RUN npm install
 RUN npm install --workspaces
 
 EXPOSE 3000
