@@ -95,6 +95,8 @@ services:
     depends_on:
       - zipkin
     platform: linux/x86_64
+    environment:
+      - NODE_ENV="development"
 networks:
   postgres:
     driver: bridge
