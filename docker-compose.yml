@@ -45,7 +45,7 @@ services:
     networks:
       - costumers
   cart:
-    image: prospeak/cart
+    image: prospeak15/cart
     container_name: cart
     ports:
       - "4000:4000"
@@ -58,7 +58,7 @@ services:
       - PORT=4000
       - REDIS_HOST=redis://redis:6379
   costumer:
-    image: prospeak/costumer
+    image: prospeak15/costumer
     container_name: costumer
     ports:
       - "4001:4001"
@@ -72,7 +72,7 @@ services:
     env_file:
       - .env
   inventory:
-    image: prospeak/inventory
+    image: prospeak15/inventory
     container_name: inventory
     ports:
       - "4002:4002"
