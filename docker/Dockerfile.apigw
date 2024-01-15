@@ -1,0 +1,19 @@
+FROM node:lts-alpine
+
+WORKDIR /usr/src/app
+
+# Copy root package.json and lockfile
+COPY *.json ./
+
+# Copy the docs package.json
+COPY packages/apigw/package.json ./packages/apigw/package.json
+COPY packages/apigw ./packages/apigw
+
+RUN npm install
+RUN npm install -w @prospeak/apigw
+
+# Copy app source
+
+EXPOSE 3000
+
+CMD ["npm", "run", "start"]

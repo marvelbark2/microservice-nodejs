@@ -85,7 +85,15 @@ services:
       - PORT=4002
     env_file:
       - .env
-  
+  apigw:
+    image: prospeak15/apigw
+    container_name: apigw
+    ports:
+      - "4003:3000"
+    networks:
+      - customers
+    depends_on:
+      - zipkin
 networks:
   postgres:
     driver: bridge
