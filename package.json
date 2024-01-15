@@ -15,6 +15,7 @@
     "lerna": "^8.0.2"
   },
   "scripts": {
-    "serve": "lerna run tsc && lerna run start"
+    "serve": "lerna run tsc && lerna run start",
+    "start": "npm run start -w @prospeak/apigw"
   }
 }
