@@ -7,13 +7,12 @@ COPY *.json ./
 
 # Copy the docs package.json
 COPY packages/cart/package.json ./packages/cart/package.json
-
+COPY packages/cart ./packages/cart
 COPY prisma ./prisma/
 
 RUN npm install
 RUN npm install -w @prospeak/cart
 # Copy app source
-COPY packages/cart ./packages/cart
 
 EXPOSE 3000
 

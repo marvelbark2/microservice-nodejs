@@ -7,14 +7,13 @@ COPY *.json ./
 
 # Copy the docs package.json
 COPY packages/inventory/package.json ./packages/inventory/package.json
-
+COPY packages/inventory ./packages/inventory
 COPY prisma ./prisma/
 
 RUN npm install
 RUN npm install -w @prospeak/inventory
 
 # Copy app source
-COPY packages/inventory ./packages/inventory
 
 EXPOSE 3000
 
