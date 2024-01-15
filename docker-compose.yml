@@ -33,7 +33,7 @@ services:
     ports:
       - "9411:9411"
     networks:
-      - costumers
+      - customers
   redis:
     image: redis:6.2-alpine
     restart: always
@@ -43,27 +43,27 @@ services:
     volumes: 
       - redis:/data
     networks:
-      - costumers
+      - customers
   cart:
     image: prospeak15/cart
     container_name: cart
     ports:
       - "4000:4000"
     networks:
-      - costumers
+      - customers
     depends_on:
       - redis
       - zipkin
     environment:
       - PORT=4000
       - REDIS_HOST=redis://redis:6379
-  costumer:
-    image: prospeak15/costumer
-    container_name: costumer
+  customer:
+    image: prospeak15/customer
+    container_name: customer
     ports:
       - "4001:4001"
     networks:
-      - costumers
+      - customers
     depends_on:
       - postgres
       - zipkin
@@ -77,7 +77,7 @@ services:
     ports:
       - "4002:4002"
     networks:
-      - costumers
+      - customers
     depends_on:
       - postgres
       - zipkin
@@ -89,7 +89,7 @@ services:
 networks:
   postgres:
     driver: bridge
-  costumers:
+  customers:
     driver: bridge
 
 volumes:
