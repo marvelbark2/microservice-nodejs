@@ -94,6 +94,7 @@ services:
       - customers
     depends_on:
       - zipkin
+    platform: linux/x86_64
 networks:
   postgres:
     driver: bridge
