@@ -14,7 +14,7 @@
     "lib"
   ],
   "scripts": {
-    "start": "ryo dev"
+    "start": "ryo start"
   },
   "dependencies": {
     "@trpc/client": "^11.0.0-next-beta.193",
